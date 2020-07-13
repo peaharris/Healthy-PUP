@@ -1,0 +1,27 @@
+﻿@model Dog
+
+
+<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-faded p-1">
+        <h3>
+            <a asp-controller="Dog" asp-action="Detail" asp-route-id="@Model.Id" class="badge badge-pill badge-primary text-white">
+                <i style='font-size: 20px;color:white' class='fas'>&#xf1b0;</i> @Model.Name
+            </a>
+            <span class="badge badge-pill badge-primary" style="float:right">
+                &#x1F382 @Model.Birthday &#x1F389
+            </span>
+        </h3>
+    </div>
+    <div class="cart-text p-1">
+        <span style="color:#2196F3">
+            <i style='font-size: 20px;' class='fas'>&#xf6d3;</i>
+            @Model.Breed
+            <i style='font-size: 20px;' class='fas'>&#xf6d3;</i>
+        </span>
+        <span style="float:right">
+            <a asp-controller="Dog" asp-action="Update" asp-route-id="@Model.Id" class="badge badge-warning">Edit</a>
+            <a asp-controller="Dog" asp-action="Delete" asp-route-id="@Model.Id" class="badge badge-danger">Delete &#x1F5D1</a>
+        </span>
+    </div>
+</div>
+

@@ -1,0 +1,91 @@
+﻿@model IQueryable<Dog>
+<!--This goes inside of the render body int _Layout-->
+<!--Add Dog-->
+
+<div>
+    <h3>
+        <span style="float:right">
+            <a asp-controller="Dog" asp-action="Create"> Add New Dog <i class="fas fa-dog" style="color:#2196F3;font-size:30px;"></i></a>
+        </span>
+    </h3>
+</div>
+
+<br />
+
+<hr />
+@foreach (Dog d in Model)
+{
+    @Html.Partial("DogSummary", d)
+    <br />
+}
+<hr />
+
+<!--Pagination Elements-->
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="jumbotron jumbotron-fluid bg-primary text-white text-center shadow">
+                <div class="container">
+                    <h1>Welcome to HealthyPUP!</h1>
+                    <h4>Click <a asp-controller="Dog" asp-action="Create" class=" badge bg-white text-primary"> Add New Dog </a> to get started!</h4>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item col-8 offset-2">
+            <div class="center-block shadow">
+                <img class="w-100" style="margin:auto" src="https://i.ibb.co/1LtHKKN/winnie.png" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block bg-dark rounded" style="opacity:0.8">
+                    <h1 style="opacity:1">About Us</h1>
+                    <p style="opacity:1">Learn more about HealthyPUP <a asp-controller="Home" asp-action="About" class="badge bg-white text-dark"> HERE </a>!</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="jumbotron jumbotron-fluid bg-white text-primary text-center shadow">
+                <div class="container">
+                    <h1>Need Help Training Your Dog?</h1>
+                    <a href="https://www.youtube.com/channel/UCZzFRKsgVMhGTxffpzgTJlQ" target="_blank">
+                        <img src="https://static.wixstatic.com/media/7a9b87_90231ea6074d4728b281eb4cc0f0bb55.png" />
+                    </a>
+                    <br />
+                    <br/>
+                    <h4>
+                        Features dog training resources and YouTube videos!
+                    </h4>
+                    <p>
+                        Don't worry! They are all free and use positive reinforcement :)
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="jumbotron jumbotron-fluid bg-primary text-white text-center shadow">
+                <div class="container">
+                    <h1>Looking to Adopt a Pet?</h1>
+                    <p>
+                        Find your next fur baby at:
+                    </p>
+                    <a href="https://www.petfinder.com" target="_blank">
+                        <img src="https://lh3.googleusercontent.com/LNda9-97TdaB6vhV8ScS15XvW0oEbhQGbMNhP5XiJX4HvTvPqRy4LYH5x_aeviks--c?" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{C13D6179-1F71-48BB-96AB-EFF2279FC811}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HealthyPUP/Models/Dog.cs">
+    <Files>
+      <File FileName="HealthyPUP/Controllers/HomeController.cs" Line="12" Column="45" />
+      <File FileName="HealthyPUP/Models/User.cs" Line="8" Column="9" />
+      <File FileName="HealthyPUP/Models/DailyRoutine.cs" Line="11" Column="1" />
+      <File FileName="HealthyPUP/Models/VetVisits.cs" Line="18" Column="2" />
+      <File FileName="HealthyPUP/Models/Walks.cs" Line="19" Column="1" />
+      <File FileName="HealthyPUP/Models/Dog.cs" Line="15" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HealthyPUP" expanded="True">
+            <Node name="HealthyPUP" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Dog.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.HealthyPUP FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

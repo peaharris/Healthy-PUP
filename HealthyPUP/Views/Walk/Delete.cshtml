@@ -1,0 +1,50 @@
+﻿@model Walk
+
+<div class="col-lg-6">
+    <h3 style="color:ghostwhite" class="badge-pill bg-primary">Delete Walk</h3>
+</div>
+
+<div class="container pl-sm-5">
+    <form>
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="DogId" />
+
+        <table>
+            <tr>
+                <th> Date: </th>
+                <td> <input asp-for="Date" class="form-control mr-sm-2" type="date" /></td>
+            </tr>
+            <tr>
+                <th> Duration: </th>
+                <td> <input asp-for="Duration" class="form-control mr-sm-2" placeholder="Duration" aria-label="Duration" /></td>
+            </tr>
+            <tr>
+                <th> Distance: </th>
+                <td> <input asp-for="Distance" class="form-control mr-sm-2" placeholder="Distance" aria-label="Distance" /></td>
+            </tr>
+            <tr>
+                <th> Location: </th>
+                <td> <input asp-for="Location" class="form-control mr-sm-2" placeholder="Location" aria-label="Location" /></td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <input type="submit"
+                           asp-controller="Walk"
+                           asp-action="Delete"
+                           formmethod="post"
+                           value="Delete &#x1F5D1"
+                           class="badge-pill badge-danger"
+                           asp-for-id="WalkId" />
+                    <input type="submit"
+                           asp-controller="Dog"
+                           asp-action="Detail"
+                           formmethod="get"
+                           value="Cancel"
+                           class="badge-pill badge-primary"
+                           asp-route-id="@Model.DogId" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>

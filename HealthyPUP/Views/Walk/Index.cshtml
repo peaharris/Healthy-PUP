@@ -1,0 +1,37 @@
+﻿@model IQueryable<Walk>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title> Walk </title>
+</head>
+
+<body>
+    <hr />
+    <table>
+        <tr>
+            <th> Id </th>
+            <th> Date </th>
+            <th> Distance </th>
+            <th> Duration </th>
+            <th> Location </th>
+        </tr>
+        @foreach (Walk w in Model)
+        {
+            if (w != null)
+            {
+                <tr>
+                    <td> @w.Id</td>
+                    <td> @w.Date</td>
+                    <td> @w.Distance</td>
+                    <td> @w.Duration</td>
+                    <td> @w.Location</td>
+                </tr>
+            }
+        }
+    </table>
+</body>
+</html>

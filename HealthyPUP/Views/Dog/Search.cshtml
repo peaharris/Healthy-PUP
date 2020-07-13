@@ -1,0 +1,8 @@
+﻿@model IQueryable<Dog>
+
+<hr />
+@foreach (Dog d in Model)
+{
+    @Html.Partial("DogSummary", d)
+}
+<hr />

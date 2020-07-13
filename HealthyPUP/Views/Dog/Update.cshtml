@@ -1,0 +1,31 @@
+﻿@model Dog
+
+<div class="col-lg-6">
+    <h3 style="color:ghostwhite" class="badge-pill bg-primary">Update @Model.Name</h3>
+</div>
+
+<div class="container pl-sm-5">
+    <form asp-controller="Dog" asp-action="Update" method="post">
+        <input type="hidden" asp-for="Id" />
+
+        <table>
+            <tr>
+                <th> Name: </th>
+                <td> <input asp-for="Name" class="form-control mr-sm-2"/></td>
+            </tr>
+            <tr>
+                <th> Breed: </th>
+                <td> <input asp-for="Breed" class="form-control mr-sm-2" placeholder="Breed" aria-label="Breed" /></td>
+            </tr>
+            <tr>
+                <th> Birthday: </th>
+                <td> <input asp-for="Birthday" class="form-control mr-sm-2" type="date"/></td>
+            </tr>
+            <tr>
+                <th></th>
+                <td><input type="submit" value="Update @Model.Name" class="badge-pill badge-primary" asp-for-id="DogId" /></td>
+            </tr>
+        </table>
+    </form>
+</div>
+

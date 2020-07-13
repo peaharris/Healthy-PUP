@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title> Healthy PUP </title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/6b1303b8b2.js" crossorigin="anonymous"></script>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <!-- navbar --><!--href="#"-->
+    <nav class="navbar navbar-expand-lg fixed-top navbar navbar-dark bg-primary">
+        <a asp-controller="Home" asp-action="Index" class="navbar-brand"><h3 style="font-family:Arial Rounded MT"> <i class="fas fa-home" style="color:white;font-size:30px;"></i> HealthyPUP </h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-4">
+                <li class="nav-item">
+                    <a asp-controller="Dog" asp-action="Index" a class="nav-link " data-value="dog"><h3 style="font-family:Arial Rounded MT">Pets</h3></a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="About" class="nav-link" data-value="about"><h3 style="font-family:Arial Rounded MT">About</h3></a>
+                </li>
+                <li>
+                    <partial name="_LoginPartial" />
+                </li>
+            </ul>
+        </div>
+        <form class="form-inline" asp-controller="Dog" asp-action="Search" method="post">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="id" />
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" value="Search">Search</button>
+        </form>
+    </nav>
+
+    <!-- <h1>
+           <nav class="navbar navbar-expand-lg fixed-top">
+               <a class="navbar-brand" href="#"> Home </a>
+               <a class="navbar-brand" href="#"> Pets </a>
+               <a class="navbar-brand" href="#"> About Us </a>
+               <a class="navbar-brand" href="#"> Sign Out </a>
+           </nav>
+       </h1>
+    <div class="navbar navbar-inverse bg-inverse" role="navigation">
+       </div>-->
+
+    <br />
+    <br />
+    <div class="row m-1 p-1 alert-primary mr-sm-2">
+        <!--
+        <div id="categories" class="col-3">
+                This uses 3/12 of the screen
+            <br />
+            <br />
+            <br />
+            <div class="shadow p-4 mb-5 bg-white rounded text-center" style="font-family:'Arial Rounded MT';color:#2196F3">
+                <h1><strong>HealthyPUP</strong></h1>
+                <p style="color:dimgray"> Helping to keep your fur baby healthy</p>
+
+            </div>
+        </div> -->
+
+        <div class="col-12" style="font-family:Arial Rounded MT">
+            <!--Uses 9/12 of the screen, default is using 12 cols-->
+            <br />
+            <br />
+            @RenderBody()
+            <br />
+            <br />
+        </div>
+    </div>
+    <div class="align-content-lg-stretch">
+        <img src="https://images.radio.com/knxam/GettyImages-1140456384.jpg?width=1270&height=450&crop=2121,933,x0,y240" class="w-100">
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="shadow p-4 mb-5 bg-white rounded text-center" style="font-family:Arial Rounded MT;color:#2196F3">
+            <h1><strong>HealthyPUP</strong></h1>
+            <p style="color:dimgray"> Helping to keep your fur baby healthy</p>
+            <p>
+                &copy; 2020 - @DateTime.Today.ToString("yyyy")
+                <a asp-area="" asp-controller="Home"
+                   asp-action="Privacy"> Privacy </a>
+            </p>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
+

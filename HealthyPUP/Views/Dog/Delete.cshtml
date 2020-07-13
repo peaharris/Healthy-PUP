@@ -1,0 +1,20 @@
+﻿@model Dog
+
+@Html.Partial("DogSummary", Model)
+
+<div class="align-content-lg-stretch">
+    <div class="bg-faded p-1">
+        <h1 class="alert-danger"> We are sorry you are about to delete @Model.Name. Are You Sure? </h1>
+        <form method="post">
+            <input type="hidden" asp-for="Id" />
+            <input class="badge-danger" type="submit" value="Delete &#x1F5D1" />
+            <button class="badge-primary" asp-controller="Dog" asp-action="Index" formmethod="get">
+                Cancel
+            </button>
+            <!--
+        <a asp-controller="Dog" asp-action="Delete" class="badge badge-danger" type="submit" value="Delete">Delete</a>
+        <a asp-controller="Dog" asp-action="Index" class="badge badge-primary">Cancel</a>
+        -->
+        </form>
+    </div>
+</div>

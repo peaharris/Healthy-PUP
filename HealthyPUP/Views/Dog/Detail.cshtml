@@ -1,0 +1,160 @@
+﻿@model Dog
+
+<div style="float:right">
+    <h2>
+        <a asp-controller="Dog" asp-action="Index" class="badge badge-primary">Back</a>
+    </h2>
+</div>
+<br />
+<hr />
+
+@Html.Partial("DogSummary", Model)
+
+<hr />
+
+<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-faded p-1">
+        <h3>
+            <span class="badge badge-pill badge-primary">
+                @Model.Name's Walks
+                <span style="color:white">
+                    <i style='font-size: 24px;' class='fas'>&#xf6ec; &nbsp; &nbsp; &#xf6d3;</i>
+                </span>
+            </span>
+            <span style="float:right">
+                <form>
+                    <button asp-controller="Walk" asp-action="Create" method="get" asp-route-id="@Model.Id" class="badge badge-primary">
+                        Add
+                    </button>
+                </form>
+            </span>
+        </h3>
+        <table class="table table-hover">
+            <tr>
+                <th>Date</th>
+                <th>Duration (minutes)</th>
+                <th>Distance (miles)</th>
+                <th>Location</th>
+            </tr>
+            @foreach (Walk w in Model.Walks)
+            {
+                <tr>
+                    <td>@w.Date</td>
+                    <td>@w.Duration</td>
+                    <td>@w.Distance</td>
+                    <td>@w.Location</td>
+                    <td>
+                        <span style="float:right">
+                            <a asp-controller="Walk" asp-action="Update" asp-route-id="@w.Id" class="badge badge-warning">Edit</a>
+                            <a asp-controller="Walk" asp-action="Delete" asp-route-id="@w.Id" class="badge badge-danger">Delete &#x1F5D1</a>
+                        </span>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+<hr />
+
+<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-faded p-1">
+        <h3>
+            <span class="badge badge-pill badge-primary">
+                @Model.Name's Daily Routine
+                <span style="color:white">
+                    <i style='font-size: 24px;' class='fas'>
+                        &#xf5d7;
+                        &#xf7d8;
+                        &#xf2fe;
+                    </i>
+                </span>
+            </span>
+            <span style="float:right">
+                <form>
+                    <button asp-controller="DailyRoutine" asp-action="Create" method="get" asp-route-id="@Model.Id" class="badge badge-primary">
+                        Add
+                    </button>
+                </form>
+            </span>
+        </h3>
+        <table class="table table-hover">
+            <tr>
+                <th>Date</th>
+                <th>Food</th>
+                <th>Poop</th>
+                <th>Pee</th>
+            </tr>
+            @if (Model.DailyRoutines != null)
+            {
+                @foreach (DailyRoutine dr in Model.DailyRoutines)
+                {
+                    <tr>
+                        <td>@dr.Date</td>
+                        <td>@dr.Food</td>
+                        <td>@dr.Poop</td>
+                        <td>@dr.Pee</td>
+                        <td>
+                            <span style="float:right">
+                                <a asp-controller="DailyRoutine" asp-action="Update" asp-route-id="@dr.Id" class="badge badge-warning">Edit</a>
+                                <a asp-controller="DailyRoutine" asp-action="Delete" asp-route-id="@dr.Id" class="badge badge-danger">Delete &#x1F5D1</a>
+                            </span>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+
+<hr />
+
+<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-faded p-1">
+        <h3>
+            <span class="badge badge-pill badge-primary">
+                @Model.Name's Vet Visits
+                <span style="color:white">
+                    <i style='font-size: 24px;' class='fas'>
+                        &#xf21e;
+                        &#xf0f1;
+                        &#xf0f0;
+                    </i>
+                </span>
+            </span>
+            <span style="float:right">
+                <form>
+                    <button asp-controller="VetVisit" asp-action="Create" method="get" asp-route-id="@Model.Id" class="badge badge-primary">
+                        Add 
+                    </button>
+                </form>
+            </span>
+        </h3>
+        <table class="table table-hover">
+            <tr>
+                <th>Date</th>
+                <th>Vaccine</th>
+                <th>Weight</th>
+                <th>Comments</th>
+            </tr>
+            @if (Model.VetVisits != null)
+            {
+                @foreach (VetVisit v in Model.VetVisits)
+                {
+                    <tr>
+                        <td>@v.Date</td>
+                        <td>@v.Vaccine</td>
+                        <td>@v.Weight</td>
+                        <td>@v.Comments</td>
+                        <td>
+                            <span style="float:right">
+                                <a asp-controller="VetVisit" asp-action="Update" asp-route-id="@v.Id" class="badge badge-warning">Edit</a>
+                                <a asp-controller="VetVisit" asp-action="Delete" asp-route-id="@v.Id" class="badge badge-danger">Delete &#x1F5D1</a>
+                            </span>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>

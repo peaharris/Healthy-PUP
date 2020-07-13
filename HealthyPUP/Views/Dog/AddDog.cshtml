@@ -1,0 +1,47 @@
+﻿<!--model IQueryable<Dog>-->
+
+@using HealthyPUP.Models
+@model Dog
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title> Add Dog </title>
+    <link rel="stylesheet" type="text/css"
+          href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+</head>
+
+<body class="p-2">
+    <h3 class="text-center"> Add Dog </h3>
+    <form asp-controller="Dog" asp-action="AddDog" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="Name"> Name: </label>
+            <input asp-for="Name" class="form-control"
+                   placeholder="Dog's Name" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Breed"> Breed: </label>
+            <input asp-for="Breed" class="form-control"
+                   placeholder="Breed" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Birthday"> Birthday: </label>
+            <input asp-for="Birthday" class="form-control"
+                   placeholder="Birthday" />
+        </div>
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary">
+                Add
+            </button>
+            <button asp-controller="Dog" asp-action="Index" class="btn btn-secondary">
+                Cancel
+            </button>
+        </div>
+    </form>
+</body>
+</html>
