@@ -10,6 +10,8 @@ using PagedList;
 using PagedList.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace HealthyPUP.Controllers
 {
@@ -35,9 +37,16 @@ namespace HealthyPUP.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Dog dog)
+        public /*async*/ IActionResult Create(Dog dog/*, IFormFile file*/)
         {
             Dog d = repository.Create(dog);
+
+            //var filePath = Path.GetTempFileName();
+            //using (var stream = System.IO.File.Create(filePath))
+            //{
+            //    await file.CopyToAsync(stream);
+            //}
+
             return RedirectToAction("Detail", "Dog", new { id = dog.Id });
         }
 

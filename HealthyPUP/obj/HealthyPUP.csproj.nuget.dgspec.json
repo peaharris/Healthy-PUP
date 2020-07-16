@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wwstudent\\Documents\\HealthyPUP\\HealthyPUP\\HealthyPUP.csproj": {}
+    "C:\\Users\\wwstudent\\Documents\\Healthy-PUP\\HealthyPUP\\HealthyPUP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wwstudent\\Documents\\HealthyPUP\\HealthyPUP\\HealthyPUP.csproj": {
+    "C:\\Users\\wwstudent\\Documents\\Healthy-PUP\\HealthyPUP\\HealthyPUP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wwstudent\\Documents\\HealthyPUP\\HealthyPUP\\HealthyPUP.csproj",
+        "projectUniqueName": "C:\\Users\\wwstudent\\Documents\\Healthy-PUP\\HealthyPUP\\HealthyPUP.csproj",
         "projectName": "HealthyPUP",
-        "projectPath": "C:\\Users\\wwstudent\\Documents\\HealthyPUP\\HealthyPUP\\HealthyPUP.csproj",
+        "projectPath": "C:\\Users\\wwstudent\\Documents\\Healthy-PUP\\HealthyPUP\\HealthyPUP.csproj",
         "packagesPath": "C:\\Users\\wwstudent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wwstudent\\Documents\\HealthyPUP\\HealthyPUP\\obj\\",
+        "outputPath": "C:\\Users\\wwstudent\\Documents\\Healthy-PUP\\HealthyPUP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\wwstudent\\AppData\\Roaming\\NuGet\\NuGet.Config",

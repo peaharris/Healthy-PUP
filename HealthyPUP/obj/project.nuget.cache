@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n4fYisoab5usotSc7uj01ZW5vHJ95fDfgWULbhzj0ECfndH3n4/vfzgK8uNS6sQXuUOJGros+a7XNg6261fDVA==",
+  "dgSpecHash": "zK1pDiF7oDvYS9GEUiBWVGVeLU6qG7r2gULyDioTgYK5n5VuKNEr/9RPrfhPRX4lLUjL/FWVQp6yRmrYnhxYmg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\wwstudent\\Documents\\HealthyPUP\\HealthyPUP\\HealthyPUP.csproj",
+  "projectFilePath": "C:\\Users\\wwstudent\\Documents\\Healthy-PUP\\HealthyPUP\\HealthyPUP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wwstudent\\.nuget\\packages\\cloudscribe.pagination.models\\1.0.5\\cloudscribe.pagination.models.1.0.5.nupkg.sha512",
     "C:\\Users\\wwstudent\\.nuget\\packages\\cloudscribe.web.pagination\\3.0.0\\cloudscribe.web.pagination.3.0.0.nupkg.sha512",

@@ -5,9 +5,15 @@
 </div>
 
 <div class="container pl-sm-5">
-    <form >
+    <form enctype="multipart/form-data" asp-action="Create" method="post">
         <input type="hidden" asp-for="Id" />
         <table>
+            <tr>
+                <th><label>File:</label></th>
+                <td>
+                    <input type="file" name="file" />
+                </td>
+            </tr>
             <tr>
                 <th> Name: </th>
                 <td> <input asp-for="Name" class="form-control mr-sm-2" placeholder="Name" aria-label="Name" /></td>
