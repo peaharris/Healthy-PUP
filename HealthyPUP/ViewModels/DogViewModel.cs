@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HealthyPUP.Models
 {
-    public class Dog //POCO create database 
+    public class DogViewModel //POCO create database 
     {
         // F i e l d s  &  P r o p e r t i e s
         [Key]
@@ -20,7 +21,7 @@ namespace HealthyPUP.Models
         public IEnumerable<Walk> Walks { get; set; }
         public IEnumerable<VetVisit> VetVisits { get; set; }
         public IEnumerable<DailyRoutine> DailyRoutines { get; set; }
-        public string ProfilePicture { get; set; }
+        public IFormFile ProfilePicture { get; set; }
 
         //[ForeignKey("User")]
         //public int UserId { get; set; }

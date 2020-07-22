@@ -89,8 +89,9 @@ namespace HealthyPUP.Models
                 dogFromDb.Name = dog.Name;
                 dogFromDb.Birthday = dog.Birthday;
                 dogFromDb.Breed = dog.Breed;
+                dogFromDb.ProfilePicture = dog.ProfilePicture;
 
-            //3. Dear Database: Please update you copy of this product
+                //3. Dear Database: Please update you copy of this product
                 context.SaveChanges();
             }
             return dogFromDb;

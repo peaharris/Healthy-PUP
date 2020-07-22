@@ -581,7 +581,6 @@ C:\Users\wwstudent\Documents\Healthy-PUP\HealthyPUP\bin\Debug\netcoreapp3.1\runt
 C:\Users\wwstudent\Documents\Healthy-PUP\HealthyPUP\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\wwstudent\Documents\Healthy-PUP\HealthyPUP\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\wwstudent\Documents\Healthy-PUP\HealthyPUP\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\wwstudent\Documents\Healthy-PUP\HealthyPUP\obj\Debug\netcoreapp3.1\HealthyPUP.csprojAssemblyReference.cache
 C:\Users\wwstudent\Documents\Healthy-PUP\HealthyPUP\obj\Debug\netcoreapp3.1\HealthyPUP.AssemblyInfoInputs.cache
 C:\Users\wwstudent\Documents\Healthy-PUP\HealthyPUP\obj\Debug\netcoreapp3.1\HealthyPUP.AssemblyInfo.cs
 C:\Users\wwstudent\Documents\Healthy-PUP\HealthyPUP\obj\Debug\netcoreapp3.1\HealthyPUP.csproj.CoreCompileInputs.cache
@@ -636,3 +635,4 @@ C:\Users\wwstudent\Documents\Healthy-PUP\HealthyPUP\obj\Debug\netcoreapp3.1\stat
 C:\Users\wwstudent\Documents\Healthy-PUP\HealthyPUP\obj\Debug\netcoreapp3.1\HealthyPUP.dll
 C:\Users\wwstudent\Documents\Healthy-PUP\HealthyPUP\obj\Debug\netcoreapp3.1\HealthyPUP.pdb
 C:\Users\wwstudent\Documents\Healthy-PUP\HealthyPUP\obj\Debug\netcoreapp3.1\HealthyPUP.genruntimeconfig.cache
+C:\Users\wwstudent\Documents\Healthy-PUP\HealthyPUP\obj\Debug\netcoreapp3.1\HealthyPUP.csprojAssemblyReference.cache

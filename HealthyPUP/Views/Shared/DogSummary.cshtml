@@ -1,6 +1,17 @@
 ﻿@model Dog
 
 
+@if (Model.ProfilePicture != null)
+{
+    <a asp-controller="Dog" asp-action="Detail" asp-route-id="@Model.Id">
+        <img src="~/images/@Model.ProfilePicture"
+             class="rounded-circle img-responsive center-block d-block mx-auto"
+             alt="Puppy Image"
+             height="250" width="250"
+             asp-append-version="true" />
+    </a>
+}
+
 <div class="card card-outline-primary m-1 p-1">
     <div class="bg-faded p-1">
         <h3>
@@ -12,6 +23,7 @@
             </span>
         </h3>
     </div>
+
     <div class="cart-text p-1">
         <span style="color:#2196F3">
             <i style='font-size: 20px;' class='fas'>&#xf6d3;</i>
@@ -24,4 +36,3 @@
         </span>
     </div>
 </div>
-

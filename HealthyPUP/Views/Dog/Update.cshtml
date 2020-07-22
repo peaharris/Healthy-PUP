@@ -1,17 +1,23 @@
 ﻿@model Dog
 
-<div class="col-lg-6">
+<div class="col-lg-6 text-center">
     <h3 style="color:ghostwhite" class="badge-pill bg-primary">Update @Model.Name</h3>
 </div>
 
 <div class="container pl-sm-5">
-    <form asp-controller="Dog" asp-action="Update" method="post">
+    <form enctype="multipart/form-data" asp-controller="Dog" asp-action="Update" method="post">
         <input type="hidden" asp-for="Id" />
 
         <table>
             <tr>
+                <th><label>File:</label></th>
+                <td>
+                    <input type="file" name="file" />
+                </td>
+            </tr>
+            <tr>
                 <th> Name: </th>
-                <td> <input asp-for="Name" class="form-control mr-sm-2"/></td>
+                <td> <input asp-for="Name" class="form-control mr-sm-2" /></td>
             </tr>
             <tr>
                 <th> Breed: </th>
@@ -19,11 +25,22 @@
             </tr>
             <tr>
                 <th> Birthday: </th>
-                <td> <input asp-for="Birthday" class="form-control mr-sm-2" type="date"/></td>
+                <td> <input asp-for="Birthday" class="form-control mr-sm-2" type="date" /></td>
             </tr>
             <tr>
                 <th></th>
-                <td><input type="submit" value="Update @Model.Name" class="badge-pill badge-primary" asp-for-id="DogId" /></td>
+                <td>
+                    <input type="submit"
+                           value="Update @Model.Name"
+                           class="badge-pill badge-primary"
+                           asp-for-id="DogId" />
+                    <input type="submit"
+                           asp-controller="Dog"
+                           asp-action="Index"
+                           formmethod="get"
+                           value="Cancel"
+                           class="badge-pill badge-primary" />
+                </td>
             </tr>
         </table>
     </form>
