@@ -4,7 +4,7 @@
 @if (Model.ProfilePicture != null)
 {
     <a asp-controller="Dog" asp-action="Detail" asp-route-id="@Model.Id">
-        <img src="~/images/@Model.ProfilePicture"
+        <img src="@Model.ProfilePicture"
              class="rounded-circle img-responsive center-block d-block mx-auto"
              alt="Puppy Image"
              height="250" width="250"

@@ -41,24 +41,35 @@ namespace HealthyPUP.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(Dog dog, IFormFile file)
+        public IActionResult Create(Dog dog, string file)
         {
             if (file != null)
             {
-                string uploadsFolder = Path.Combine(webHostEnvironment.WebRootPath, "images");
-                string uniqueFileName = Path.GetRandomFileName() + Path.GetExtension(file.FileName);
-                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                using (var stream = System.IO.File.Create(filePath)) //creating a new file
-                {
-                    await file.CopyToAsync(stream); //streaming bits over putting into new path
-                }
-                dog.ProfilePicture = uniqueFileName;
+                dog.ProfilePicture = file;
             }
-
             Dog d = repository.Create(dog);
 
-            return RedirectToAction("Detail", "Dog", new { id = dog.Id }); 
+            return RedirectToAction("Detail", "Dog", new { id = dog.Id });
         }
+
+        //public async Task<IActionResult> Create(Dog dog, IFormFile file)
+        //{
+        //    if (file != null)
+        //    {
+        //        string uploadsFolder = Path.Combine(webHostEnvironment.WebRootPath, "images");
+        //        string uniqueFileName = Path.GetRandomFileName() + Path.GetExtension(file.FileName);
+        //        var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+        //        using (var stream = System.IO.File.Create(filePath)) //creating a new file
+        //        {
+        //            await file.CopyToAsync(stream); //streaming bits over putting into new path
+        //        }
+        //        dog.ProfilePicture = uniqueFileName;
+        //    }
+
+        //    Dog d = repository.Create(dog);
+
+        //    return RedirectToAction("Detail", "Dog", new { id = dog.Id }); 
+        //}
 
         // R e a d
         public IActionResult Index()
@@ -67,15 +78,6 @@ namespace HealthyPUP.Controllers
                 this.repository.GetAllDogs();
             return View(allDogs);
         }
-
-        //public IActionResult Index(int dogPage=1)
-        //{
-        //    IQueryable<Dog> someDogs = repository.GetAllDogs()
-        //        .OrderBy(d => d.Id)
-        //        .Skip((dogPage - 1) * PageSize)
-        //        .Take(PageSize);
-        //    return View(someDogs);
-        //}
 
         public IActionResult Detail(int id)
         {
@@ -119,18 +121,11 @@ namespace HealthyPUP.Controllers
             return RedirectToAction("Index");
         }
         [HttpPost]
-        public async Task<IActionResult> Update(Dog dog, IFormFile file)
+        public IActionResult Update(Dog dog, string file)
         {
             if (file != null)
             {
-                string uploadsFolder = Path.Combine(webHostEnvironment.WebRootPath, "images");
-                string uniqueFileName = Path.GetRandomFileName() + Path.GetExtension(file.FileName);
-                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                using (var stream = System.IO.File.Create(filePath)) //creating a new file
-                {
-                    await file.CopyToAsync(stream); //streaming bits over putting into new path
-                }
-                dog.ProfilePicture = uniqueFileName;
+                dog.ProfilePicture = file;
             }
 
             Dog d2 = repository.UpdateDog(dog);
@@ -139,6 +134,26 @@ namespace HealthyPUP.Controllers
 
             //return RedirectToAction("Detail", "Dog", new { id = dog.Id });
         }
+        //public async Task<IActionResult> Update(Dog dog, IFormFile file)
+        //{
+        //    if (file != null)
+        //    {
+        //        string uploadsFolder = Path.Combine(webHostEnvironment.WebRootPath, "images");
+        //        string uniqueFileName = Path.GetRandomFileName() + Path.GetExtension(file.FileName);
+        //        var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+        //        using (var stream = System.IO.File.Create(filePath)) //creating a new file
+        //        {
+        //            await file.CopyToAsync(stream); //streaming bits over putting into new path
+        //        }
+        //        dog.ProfilePicture = uniqueFileName;
+        //    }
+
+        //    Dog d2 = repository.UpdateDog(dog);
+        //    return RedirectToAction("Detail", "Dog", new { id = dog.Id });
+        //    //Dog d = repository.Create(dog);
+
+        //    //return RedirectToAction("Detail", "Dog", new { id = dog.Id });
+        //}
         //)
         //{
         //    Dog d2 = repository.UpdateDog(d);
